@@ -1,19 +1,21 @@
-name: CNC Bootcamp 2020
-
+name: Continuous Deployment
 on: [push]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    name: Deploying to surge
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install Node.js
-        uses: actions/setup-node@v2-beta
-        with:
-          node-version: 12
-      - name: Install Surge
-        run: npm install -g surge
-      - name: Run surge
-        run: surge ./ utopian-party.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            
+            - run: echo "Setting up NodeJs"
+            - name: Setup NodeJs
+              uses: actions/setup-node@v1
+              with:
+               node-version: 12.x
+
+            - run: npm install -g surge
+            - run: echo "Deploying website"
+            - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }} 
+          
+
 
