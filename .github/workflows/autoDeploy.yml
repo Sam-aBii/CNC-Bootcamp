@@ -7,8 +7,7 @@ name: Continuous Deployment
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,19 +16,13 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             
-            - run: echo "Setting up NodeJs"
             - name: Setup NodeJs
-              uses: actions/setup-node@v1
+              uses: actions/setup-node@v2-beta
               with:
                node-version: 12.x
 
-            - run: npm install -g surge
-            - run: echo "Deploying website"
-            - run: surge ./ surge utopian-party.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
 
-
-
-
-          
-
-
+            - name: Installing surge
+              run: npm install --global surge
+            - name: Deploy using surge
+              run: surge ./ utopian-party.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
