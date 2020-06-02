@@ -1,55 +1,62 @@
-# CNC-Bootcamp
-
-Bootcamp 2020 Class 1: Setup Website Development Environment
+# Bootcamp 2020 Class 1: Setup Website Development Environment
 
 I took the following steps, all bootcampers should also do this on there own repos
 
-Signup on GitHub.com and Install GitHub Desktop on your computer
+1. Signup on GitHub.com and Install GitHub Desktop on your computer
+
 https://desktop.github.com/
 
-Using Github Desktop create new public repo and publish it on GitHub.com
+2. Using Github Desktop create new public repo and publish it on GitHub.com
 
-Install VS Code, we will use it as our code editor
+3. Install VS Code, we will use it as our code editor
 
 https://code.visualstudio.com/download
 
-Create a simple hello world html file and name it index.html. Using GitHub desktop commit the code and push it.
+4. Create a simple hello world html file and name it index.html. Using GitHub desktop commit the code and push it.
 
-Install Node.js
+5. Install Node.js
 
 https://nodejs.org/en/download/
 
-Install Surge
+6. Install Surge 
+
 npm install --global surge
 
-Generate Surge token by the following command
+7. Generate Surge token by the following command 
+
 surge token
 
-Save the surge token in the repo's GitHubs secrets
+8. Save the surge token in the repo's GitHubs secrets
 
-Watch Introduction to GitHub Actions
+9. Watch Introduction to GitHub Actions
 
 https://www.youtube.com/watch?v=eB0nUzAI7M8
 
-Learn YAML
+10. Learn YAML
+
 https://rollout.io/blog/yaml-tutorial-everything-you-need-get-started/
 
-Configuring a Github Actions Workflow
+11. Configuring a Github Actions Workflow
+
 https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
 https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow
 
-Learn and create surge deployment action file in root of your repo in .github/workflow directory like I have done
+12. Learn and create surge deployment action file in root of your repo in .github/workflow directory like I have done
 
-Make small change in your index.html, commit it and push it again to github.com
+13. Make small change in your index.html, commit it and push it again to github.com
 
-Check the action tab to GitHub website and see if the action executed
+14. Check the action tab to GitHub website and see if the action executed
 
-open website in browser
+15. open website in browser
 
 http://bootcamp_setup_ziakhan.surge.sh/
 
-Submit your github repo URL here in the issues of the assignment repo, like I have done here:
+16. Submit your github repo URL here in the issues of the assignment repo, like I have done here:
+
 https://github.com/panacloud/Bootcamp-Setup/issues/1
 
-NOTE: Assumption is that you know HTML, CSS, and JavaScript
+
+
+NOTE: 
+Assumption is that you know HTML, CSS, and JavaScript
